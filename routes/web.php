@@ -29,7 +29,7 @@ Route::middleware([
 
 
 Route::controller(App\Http\Controllers\CourseController::class)->group(function () {
-    Route::get('/course/list', 'index')->name('career.list');
+    Route::get('/course/list', 'index')->name('course.list');
 });
 
 Route::controller(App\Http\Controllers\JobController::class)->group(function () {
