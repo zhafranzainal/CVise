@@ -26,3 +26,14 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::controller(App\Http\Controllers\CourseController::class)->group(function () {
+    Route::get('/course/list', 'index')->name('career.list');
+});
+
+Route::controller(App\Http\Controllers\JobController::class)->group(function () {
+    Route::get('/job/list', 'index')->name('job.list');
+    Route::get('/job/description', 'desc')->name('job.desc');
+    Route::get('/job/advice', 'advice')->name('job.advice');
+});

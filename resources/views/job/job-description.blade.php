@@ -1,0 +1,30 @@
+<x-app-layout>
+    <div class="container py-5">
+        <div class="text-center">
+            <h1 class="display-4 fw-bold text-dark">Software Engineer</h1>
+            <p class="mt-4 lead text-secondary">Explore software engineer scope.</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-1 g-4 mt-4">
+            <div class="col">
+                <div class="bg-white p-4 rounded shadow">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="h4 fw-bold text-dark">Software Engineer</h2>
+                            <p class="mt-3 text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="col">
+                            <a href="{{ route('job.advice') }}" class="btn btn-light custom-button">Advice</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="h5 fw-bold">Job Details</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur mollitia, at commodi rerum repellat culpa, obcaecati aliquid ad laudantium beatae amet cum laboriosam natus quae error asperiores sint dolores magnam!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>

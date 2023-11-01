@@ -1,14 +1,21 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
+    <br>
+    <div class="container bg-white overflow-hidden shadow-xl sm:rounded-lg">
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="mb-3 mb-md-4">Your Future.</h1>
+                        <h1 class="mb-3 mb-md-4">Your Career.</h1>
+                        <p class="mb-4 mb-md-5">Your Start at CareerVise!</p>
+                    </div>
+                    <div class="row">
+                         <a href="{{ route('career.list')}}" class="btn btn-light custom-button">Start for Free</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <img src="{{ asset('build') }}/assets/images/img-1.png" alt="">
             </div>
         </div>
     </div>
