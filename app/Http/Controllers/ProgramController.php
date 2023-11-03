@@ -10,9 +10,14 @@ class ProgramController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('program.program-list');
+        $search = $request->get('search', '');
+        $programs = Program::where('name', 'like', "%{$search}%")->paginate(10);
+
+        return view('programs.index')
+            ->with('programs', $programs)
+            ->with('search', $search);
     }
 
     /**
