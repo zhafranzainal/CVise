@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\CourseController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\ProgramController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,8 +30,8 @@ Route::middleware([
 });
 
 
-Route::controller(CourseController::class)->group(function () {
-    Route::get('/course/list', 'index')->name('course.list');
+Route::controller(ProgramController::class)->group(function () {
+    Route::get('/program/list', 'index')->name('program.list');
 });
 
 Route::controller(JobController::class)->group(function () {
