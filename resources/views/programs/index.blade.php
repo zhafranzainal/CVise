@@ -12,8 +12,8 @@
 
             <!-- Search Form -->
             <div class="mt-4 text-center">
-                <form>
-                    <div class="flex items-center w-full">
+                <form class="flex justify-center">
+                    <div class="flex items-center">
 
                         <x-input name="search" value="{{ $search ?? '' }}" placeholder="Search"
                             autocomplete="off"></x-input>
@@ -34,7 +34,8 @@
                     <div class="col">
                         <div class="bg-white p-4 rounded shadow">
                             <h2 class="h4 fw-bold text-dark">{{ $program['name'] }}</h2>
-                            <p class="mt-3 text-secondary">{{ $program['description'] }}</p>
+                            <p class="mt-3 text-secondary" style="text-align: justify;">{{ $program['description'] }}
+                            </p>
                             <a href="{{ route('job.list') }}" class="btn btn-light custom-button">Explore</a>
                         </div>
                     </div>
