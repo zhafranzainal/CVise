@@ -13,7 +13,7 @@ class ProgramController extends Controller
     public function index(Request $request)
     {
         $search = $request->get('search', '');
-        $programs = Program::where('name', 'like', "%{$search}%")->paginate(10);
+        $programs = Program::where('name', 'like', "%{$search}%")->paginate(3);
 
         return view('programs.index')
             ->with('programs', $programs)
