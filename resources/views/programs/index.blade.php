@@ -1,5 +1,4 @@
 <x-app-layout>
-    <br>
 
     <div class="bg-light">
         <div class="container py-5">

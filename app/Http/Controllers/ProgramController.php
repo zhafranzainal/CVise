@@ -39,9 +39,15 @@ class ProgramController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Program $program)
+    public function show(Request $request, Program $program)
     {
-        return view('programs.show')->with('program', $program);
+        $search = $request->get('search', '');
+        $jobs = $program->jobs()->where('title', 'like', "%{$search}%")->get();
+
+        return view('programs.show')
+            ->with('program', $program)
+            ->with('jobs', $jobs)
+            ->with('search', $search);
     }
 
     /**
