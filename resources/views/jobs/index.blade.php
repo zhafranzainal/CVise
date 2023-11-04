@@ -10,7 +10,7 @@
                 <div class="bg-white p-4 rounded shadow">
                     <h2 class="h4 fw-bold text-dark">Software Engineer</h2>
                     <p class="mt-3 text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="{{ route('job.desc')}}" class="btn btn-light custom-button">Explore</a>
+                    <a href="{{ route('jobs.index') }}" class="btn btn-light custom-button">Explore</a>
                 </div>
             </div>
 
@@ -18,7 +18,7 @@
                 <div class="bg-white p-4 rounded shadow">
                     <h2 class="h4 fw-bold text-dark">DevOps Engineer</h2>
                     <p class="mt-3 text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="{{ route('job.desc')}}" class="btn btn-light custom-button">Explore</a>
+                    <a href="{{ route('jobs.index') }}" class="btn btn-light custom-button">Explore</a>
                 </div>
             </div>
 
@@ -26,7 +26,7 @@
                 <div class="bg-white p-4 rounded shadow">
                     <h2 class="h4 fw-bold text-dark">Job 3</h2>
                     <p class="mt-3 text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="{{ route('job.desc')}}" class="btn btn-light custom-button">Explore</a>
+                    <a href="{{ route('jobs.index') }}" class="btn btn-light custom-button">Explore</a>
                 </div>
             </div>
         </div>

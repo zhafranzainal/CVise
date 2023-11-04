@@ -36,7 +36,7 @@ Route::controller(ProgramController::class)->group(function () {
 });
 
 Route::controller(JobController::class)->group(function () {
-    Route::get('/job/list', 'index')->name('job.list');
-    Route::get('/job/description', 'desc')->name('job.desc');
+    Route::get('/jobs', 'index')->name('jobs.index');
+    Route::get('/jobs/{job}', 'show')->name('jobs.show');
     Route::get('/job/advice', 'advice')->name('job.advice');
 });

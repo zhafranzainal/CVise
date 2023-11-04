@@ -31,7 +31,7 @@
                     <div class="bg-white p-4 rounded shadow">
                         <h2 class="h4 fw-bold text-dark">{{ $job['title'] }}</h2>
                         <p class="mt-3 text-secondary" style="text-align: justify;">{{ $job['description'] }}</p>
-                        <a href="{{ route('job.desc') }}" class="btn btn-light custom-button">Explore</a>
+                        <a href="{{ route('jobs.show', $job) }}" class="btn btn-light custom-button">Explore</a>
                     </div>
                 </div>
             @empty

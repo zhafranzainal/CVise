@@ -19,7 +19,7 @@
                     <x-nav-link href="{{ route('programs.index') }}">
                         {{ __('Course & Programme') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('job.list') }}">
+                    <x-nav-link href="{{ route('jobs.index') }}">
                         {{ __('Job') }}
                     </x-nav-link>
                 </div>
