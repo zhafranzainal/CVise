@@ -41,7 +41,7 @@ class ProgramController extends Controller
      */
     public function show(Program $program)
     {
-        //
+        return view('programs.show')->with('program', $program);
     }
 
     /**

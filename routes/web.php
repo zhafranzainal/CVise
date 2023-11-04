@@ -31,7 +31,8 @@ Route::middleware([
 
 
 Route::controller(ProgramController::class)->group(function () {
-    Route::get('/program/list', 'index')->name('program.list');
+    Route::get('/programs', 'index')->name('programs.index');
+    Route::get('/programs/{program}', 'show')->name('programs.show');
 });
 
 Route::controller(JobController::class)->group(function () {

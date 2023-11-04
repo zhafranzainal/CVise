@@ -10,7 +10,7 @@
                         <p class="mb-4 mb-md-5">Your Start at CareerVise!</p>
                     </div>
                     <div class="row">
-                        <a href="{{ route('program.list') }}" class="btn btn-light custom-button">Start for Free</a>
+                        <a href="{{ route('programs.index') }}" class="btn btn-light custom-button">Start for Free</a>
                     </div>
                 </div>
             </div>

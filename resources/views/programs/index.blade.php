@@ -36,7 +36,8 @@
                             <h2 class="h4 fw-bold text-dark">{{ $program['name'] }}</h2>
                             <p class="mt-3 text-secondary" style="text-align: justify;">{{ $program['description'] }}
                             </p>
-                            <a href="{{ route('job.list') }}" class="btn btn-light custom-button">Explore</a>
+                            <a href="{{ route('programs.show', $program) }}"
+                                class="btn btn-light custom-button">Explore</a>
                         </div>
                     </div>
                 @empty
