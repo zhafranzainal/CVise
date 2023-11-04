@@ -17,6 +17,5 @@ class ProgramSeeder extends Seeder
         Program::create(['name' => 'Computer Systems & Networking', 'description' => "Delve into the inner workings of computer hardware and networks. Understand how systems are designed, configured, and interconnected to support modern computing environments, ensuring a seamless flow of data and resources."]);
         Program::create(['name' => 'Graphics & Multimedia Technology', 'description' => "Unleash your creativity in the digital realm by learning the ins and outs of graphics and multimedia technology. Develop skills in graphic design, digital media production, and interactive content creation."]);
         Program::create(['name' => 'Cyber Security', 'description' => "Defend against evolving cyber threats and protect valuable data and information. Explore the world of ethical hacking, security protocols, and risk management strategies to become a proficient cybersecurity specialist."]);
-        Program::factory()->count(7)->create();
     }
 }
