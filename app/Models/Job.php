@@ -7,24 +7,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Program extends Model
+class Job extends Model
 {
     use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
-        'name',
+        'title',
         'description',
     ];
 
     protected $searchableFields = ['*'];
 
-    public function users()
+    public function programs()
     {
-        return $this->hasMany(User::class);
-    }
-
-    public function jobs()
-    {
-        return $this->belongsToMany(Job::class);
+        return $this->belongsToMany(Program::class);
     }
 }
