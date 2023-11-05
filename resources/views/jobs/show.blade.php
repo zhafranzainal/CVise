@@ -73,11 +73,17 @@
                     </li>
 
                     <li><strong>Tools:</strong>
-                        <ul>
-                            @foreach (json_decode($job['tools']) as $tool)
-                                <li>{{ $tool }}</li>
-                            @endforeach
-                        </ul>
+                        @if ($job['tools'])
+                            <ul>
+                                @foreach (json_decode($job['tools']) as $tool)
+                                    <li>{{ $tool }}</li>
+                                @endforeach
+                            </ul>
+                        @else
+                            <ul>
+                                <li>N/A</li>
+                            </ul>
+                        @endif
                     </li>
 
                     <li><strong>Career Progression:</strong> {{ $job['career_progression'] }}</li>
