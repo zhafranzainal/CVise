@@ -10,16 +10,18 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-1 g-4 mt-4">
 
             <div class="col">
-                <div class="bg-white p-4 rounded shadow">
+                <div class="bg-white p-4 rounded shadow" style="position: relative;">
+
+                    <a href="{{ route('jobs.advice') }}" class="btn btn-light custom-button"
+                        style="position: absolute; top: 20px; right: 20px;">Advice</a>
+
                     <div class="row">
                         <div class="col">
                             <h2 class="h4 fw-bold text-dark">{{ $job['title'] }}</h2>
                             <p class="mt-3 text-secondary">{{ $job['description'] }}</p>
                         </div>
-                        <div class="col">
-                            <a href="{{ route('job.advice') }}" class="btn btn-light custom-button">Advice</a>
-                        </div>
                     </div>
+
                 </div>
             </div>
 

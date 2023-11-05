@@ -21,22 +21,6 @@ class ProgramController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      */
     public function show(Request $request, Program $program)
@@ -48,29 +32,5 @@ class ProgramController extends Controller
             ->with('program', $program)
             ->with('jobs', $jobs)
             ->with('search', $search);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Program $program)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Program $program)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Program $program)
-    {
-        //
     }
 }

@@ -21,22 +21,6 @@ class JobController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      */
     public function show(Job $job)
@@ -45,26 +29,10 @@ class JobController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Display advice related to a specific job.
      */
-    public function edit(Job $job)
+    public function showAdvice(Job $job)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Job $job)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Job $job)
-    {
-        //
+        return view('jobs.show-advice')->with('job', $job);
     }
 }

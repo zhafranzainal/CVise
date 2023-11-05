@@ -27,7 +27,7 @@
         <!-- Job Cards -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-4">
             @forelse ($jobs as $job)
-                <div class="col-lg-12">
+                <div class="col">
                     <div class="bg-white p-4 rounded shadow">
                         <h2 class="h4 fw-bold text-dark">{{ $job['title'] }}</h2>
                         <p class="mt-3 text-secondary" style="text-align: justify;">{{ $job['description'] }}</p>

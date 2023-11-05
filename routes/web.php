@@ -19,24 +19,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 });
 
-
-Route::controller(ProgramController::class)->group(function () {
-    Route::get('/programs', 'index')->name('programs.index');
-    Route::get('/programs/{program}', 'show')->name('programs.show');
+Route::prefix('programs')->group(function () {
+    Route::get('/', [ProgramController::class, 'index'])->name('programs.index');
+    Route::get('/{program}', [ProgramController::class, 'show'])->name('programs.show');
 });
 
-Route::controller(JobController::class)->group(function () {
-    Route::get('/jobs', 'index')->name('jobs.index');
-    Route::get('/jobs/{job}', 'show')->name('jobs.show');
-    Route::get('/job/advice', 'advice')->name('job.advice');
+Route::prefix('jobs')->group(function () {
+    Route::get('/', [JobController::class, 'index'])->name('jobs.index');
+    Route::get('/advice', [JobController::class, 'showAdvice'])->name('jobs.advice');
+    Route::get('/{job}', [JobController::class, 'show'])->name('jobs.show');
 });
