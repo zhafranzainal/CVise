@@ -27,8 +27,79 @@
 
             <div class="col">
                 <div class="bg-white p-4 rounded shadow">
+
                     <h3 class="h5 fw-bold">Job Details</h3>
-                    <p>Lorem ipsum dolor</p>
+
+                    <li><strong>Responsibilities:</strong>
+                        <ul>
+                            @foreach (json_decode($job['responsibilities']) as $responsibility)
+                                <li>{{ $responsibility }}</li>
+                            @endforeach
+                        </ul>
+                    </li>
+
+                    <li><strong>Technical Skills:</strong>
+                        <ul>
+                            @foreach (json_decode($job['technical_skills']) as $skill)
+                                <li>{{ $skill }}</li>
+                            @endforeach
+                        </ul>
+                    </li>
+
+                    <li><strong>Soft Skills:</strong>
+                        <ul>
+                            @foreach (json_decode($job['soft_skills']) as $soft_skill)
+                                <li>{{ $soft_skill }}</li>
+                            @endforeach
+                        </ul>
+                    </li>
+
+                    <li><strong>Minimum Salary:</strong> RM{{ number_format($job['salary_min'], 0, '.', ',') }}</li>
+                    <li><strong>Maximum Salary:</strong> RM{{ number_format($job['salary_max'], 0, '.', ',') }}</li>
+                    <br>
+
+                    <li><strong>Programming Languages:</strong>
+                        @if ($job['programming_languages'])
+                            <ul>
+                                @foreach (json_decode($job['programming_languages']) as $language)
+                                    <li>{{ $language }}</li>
+                                @endforeach
+                            </ul>
+                        @else
+                            <ul>
+                                <li>N/A</li>
+                            </ul>
+                        @endif
+                    </li>
+
+                    <li><strong>Tools:</strong>
+                        <ul>
+                            @foreach (json_decode($job['tools']) as $tool)
+                                <li>{{ $tool }}</li>
+                            @endforeach
+                        </ul>
+                    </li>
+
+                    <li><strong>Career Progression:</strong> {{ $job['career_progression'] }}</li>
+                    <li><strong>Job Outlook:</strong> {{ $job['job_outlook'] }}</li>
+                    <br>
+
+                    <li><strong>Pros:</strong>
+                        <ul>
+                            @foreach (json_decode($job['pros']) as $pro)
+                                <li>{{ $pro }}</li>
+                            @endforeach
+                        </ul>
+                    </li>
+
+                    <li><strong>Cons:</strong>
+                        <ul>
+                            @foreach (json_decode($job['cons']) as $con)
+                                <li>{{ $con }}</li>
+                            @endforeach
+                        </ul>
+                    </li>
+
                 </div>
             </div>
 
