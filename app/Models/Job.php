@@ -14,6 +14,17 @@ class Job extends Model
     protected $fillable = [
         'title',
         'description',
+        'responsibilities',
+        'technical_skills',
+        'soft_skills',
+        'salary_min',
+        'salary_max',
+        'programming_languages',
+        'tools',
+        'career_progression',
+        'job_outlook',
+        'pros',
+        'cons',
     ];
 
     protected $searchableFields = ['*'];

@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
         $programs[1]->jobs()->attach($jobs[20]);
         $programs[1]->jobs()->attach($jobs[24]);
         $programs[1]->jobs()->attach($jobs[25]);
+        $programs[1]->jobs()->attach($jobs[29]);
 
         $programs[2]->jobs()->attach($jobs[0]);
         $programs[2]->jobs()->attach($jobs[3]);

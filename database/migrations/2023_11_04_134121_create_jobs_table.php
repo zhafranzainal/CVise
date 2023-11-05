@@ -15,6 +15,17 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('description');
+            $table->text('responsibilities');
+            $table->text('technical_skills');
+            $table->text('soft_skills');
+            $table->integer('salary_min');
+            $table->integer('salary_max');
+            $table->text('programming_languages')->nullable();
+            $table->text('tools')->nullable();
+            $table->text('career_progression');
+            $table->text('job_outlook');
+            $table->text('pros');
+            $table->text('cons');
 
             $table->timestamps();
             $table->softDeletes();
