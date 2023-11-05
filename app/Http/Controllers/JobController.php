@@ -10,9 +10,14 @@ class JobController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('jobs.index');
+        $search = $request->get('search', '');
+        $jobs = Job::where('title', 'like', "%{$search}%")->get();
+
+        return view('jobs.index')
+            ->with('jobs', $jobs)
+            ->with('search', $search);
     }
 
     /**
